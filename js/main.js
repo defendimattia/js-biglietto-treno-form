@@ -2,10 +2,12 @@ const elementInputKm = document.getElementById("inputKm")
 const elementInputAge = document.getElementById("inputAge")
 const form = document.querySelector("form")
 
+const elementKmOutput = document.getElementById("kmOutput")
+const elementAgeOutput = document.getElementById("ageOutput")
+const elementPriceOutput = document.getElementById("priceOutput")
 
 
-
-
+// submit 
 form.addEventListener("submit", (event) => {
 
     event.preventDefault()
@@ -28,8 +30,15 @@ form.addEventListener("submit", (event) => {
     //     - altrimenti prezzo pieno
 
     // - il prezzo deve essere printato in forma umana (massimo 2 decimali)
-    console.log((ticketPrice - Discount).toFixed(2))
+    const finalPrice = (ticketPrice - Discount).toFixed(2)
+
+    elementKmOutput.innerHTML = "km = " + valInputKm
+    elementAgeOutput.innerHTML = "età = " + valInputAge
+    elementPriceOutput.innerHTML = "prezzo finale = " + finalPrice + " €"
+   
+
 })
+
 
 
 
