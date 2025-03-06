@@ -15,8 +15,9 @@
 <body>
 
     <div class="container">
-        <h2 class="fw-bold text-light my-4 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
+        <h2 class="fw-bold text-light my-4 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <!-- input container -->
         <div class="container bg-light rounded text-center py-4">
             <form action="">
                 <div class="row">
@@ -25,35 +26,39 @@
                         <label for="inputKm">
                             <h5>Inserire i km da percorrere</h5>
                         </label>
-                        <input type="number" id="inputKm">
+                        <input placeholder="KM" type="number" id="inputKm">
                     </div>
                     <div class="col-sm">
                         <!-- age input -->
                         <label for="inputAge">
                             <h5>Età del passeggero</h5>
                         </label>
-                        <input type="number" id="inputAge">
+                        <input placeholder="Anni" type="number" id="inputAge">
                     </div>
                 </div>
                 <div class="container d-flex justify-content-center mt-4">
                     <!-- submit button -->
                     <input class="btn btn-outline-danger" type="submit" value="Genera biglietto">
                 </div>
-
             </form>
         </div>
 
-
-
+        <!-- result container -->
+        <div class="container px-0 d-none" id="ticket-container">
+            <h2 class="fw-bold text-light my-4 text-center">IL TUO BIGLIETTO</h2>
+            <div class="container bg-light my-4 text-center rounded">
+                <div>
+                    <strong id="kmOutput">km da percorrere: </strong><br>
+                    <strong id="ageOutput">età del passeggero: </strong><br>
+                    <strong id="priceOutput">prezzo del biglietto: </strong><br>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
-    <div>
-        <strong id="kmOutput"></strong><br>
-        <strong id="ageOutput"></strong><br>
-        <strong id="priceOutput"></strong><br>
-    </div>
+
 
     <script src="js/main.js"></script>
 </body>
